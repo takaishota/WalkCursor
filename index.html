@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Walk Cursor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+
+<style type="text/css">
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+#flashcontent {
+	height: 100%;
+}
+
+body {
+	background-color: #FFFFFF;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+</style>
+
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript" src="MouseEvent.js"></script>
+
+</head>
+
+<body onload="MouseEvent.init();">
+	<div id="flashcontent">&nbsp;</div>
+	<script type="text/javascript">
+	   // <![CDATA[ 
+	   var so = new SWFObject("WalkCursor.swf", "customMouseEvent", "100%", "100%", "9", "#FFFFFF");
+		so.addParam("quality", "high");
+		so.addParam("name", "customMouseEvent");
+		so.addParam("id", "customMouseEvent");
+		so.addParam("AllowScriptAccess", "always");
+		so.addParam("wmode", "opaque");
+		so.addParam("menu", "false");
+		so.addVariable("variable1", "value1");
+		so.write("flashcontent");
+	   // ]]> 
+	</script>
+</body>
+</html>
